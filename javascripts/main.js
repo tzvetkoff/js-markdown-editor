@@ -1,10 +1,26 @@
 window.onload = function() {
-  var converter = new Showdown.converter();
-	var source = document.getElementById('source');
-	var markdown = document.getElementById('markdown');
+  // Set default options
+  marked.setOptions({
+    gfm: true,
+    tables: true,
+    breaks: true,
+    pedantic: false,
+    sanitize: true,
+    smartLists: true,
+    langPrefix: 'language-',
+    highlight: function(code, lang) {
+      if (lang === 'js') {
+        return highlighter.javascript(code);
+      }
+      return code;
+    }
+  });
 
-	source.onchange = source.onkeyup = function() {
-	  var html = converter.makeHtml(this.value);
-	  markdown.innerHTML = html;
-	}
-}
+  var source = document.getElementById('source');
+  var markdown = document.getElementById('markdown');
+
+  source.onchange = source.onkeyup = function() {
+    var html = marked(this.value);
+    markdown.innerHTML = '<div class="markdown-body">'+html+'</div>';
+  }
+};

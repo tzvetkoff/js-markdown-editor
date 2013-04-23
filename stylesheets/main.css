@@ -2,6 +2,7 @@ body {
   background: #f8f8f8;
   color: #333333;
   padding: 20px;
+  font: 13px Helvetica, arial, freesans, clean, sans-serif;
 }
 
 body > *,
@@ -63,4 +64,5 @@ body > * > * {
   padding: 20px;
   background: #ffffff;
   border: 1px solid #cacaca;
+  line-height: 1.4em;
 }
