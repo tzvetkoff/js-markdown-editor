@@ -15,7 +15,6 @@ body {
 body {
   background: #f8f8f8;
   color: #333333;
-  padding: 20px;
   font: 13px Helvetica, arial, freesans, clean, sans-serif;
 }
 
@@ -26,17 +25,35 @@ body > * > * {
 }
 
 #wrapper {
+  margin: 0;
+  position: relative;
+  height: 100%;
   min-width: 950px;
   min-height: 500px;
-  height: 100%;
+}
+
+#editor_container {
+  position: absolute;
+  left: 0;
+  right: 65%;
+  top: 0;
+  bottom: 0;
+}
+
+#preview_container {
+  position: absolute;
+  left: 35%;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 #editor {
   position: absolute;
-  left: 30px;
-  top: 30px;
-  bottom: 30px;
-  width: 600px;
+  left: 10px;
+  right: 5px;
+  top: 10px;
+  bottom: 10px;
   padding: 3px;
   background: #dddddd;
   border-radius: 3px;
@@ -73,10 +90,10 @@ body > * > * {
 
 #preview {
   position: absolute;
-  left: 660px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
+  left: 5px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
   padding: 3px;
   background: #dddddd;
   border-radius: 3px;
