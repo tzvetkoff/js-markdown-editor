@@ -4,6 +4,15 @@ line-height:1.6;
 overflow:hidden;
 }
 
+.markdown-body a {
+color:#4183c4;
+text-decoration: none;
+}
+
+.markdown-body a:hover {
+text-decoration: underline;
+}
+
 .markdown-body a.absent {
 color:#c00;
 }
@@ -47,6 +56,7 @@ font-size:inherit;
 
 .markdown-body h1 {
 font-size:28px;
+border-bottom:1px solid #ccc;
 color:#000;
 }
 
