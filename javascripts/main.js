@@ -20,7 +20,7 @@ var MarkdownEditor = (function() {
     });
 
     // javascript support
-    var classNames = [];
+    var classNames = document.body.className.split(' ');
     if (window.FileReader) {
       classNames.push('filereader');
     }
