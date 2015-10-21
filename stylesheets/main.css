@@ -88,6 +88,7 @@ body > * > * {
     border-radius: 2px;
     border: 1px solid #d0d0d0;
     background: #e0e0e0;
+    cursor: pointer;
   }
 
   .filereader #editor_title .open,
@@ -102,6 +103,11 @@ body > * > * {
   #editor_title .button:hover,
   #preview_title .button:hover {
     border: 1px solid #c0c0c0;
+  }
+
+  #editor_title .button:active,
+  #preview_title .button:active {
+    border: 1px solid #808080;
   }
 
     #editor_title .button span,

@@ -64,7 +64,7 @@ var MarkdownEditor = (function() {
 
     source.onchange = source.onkeyup = function() {
       var html = marked(this.value);
-      output.innerHTML = '<div class="markdown-body">'+html+'</div>';
+      output.innerHTML = '<div class="markdown-body">' + html + '</div>';
     }
 
     source.onchange();
@@ -96,12 +96,16 @@ var MarkdownEditor = (function() {
   };
 
   var saveMd = function() {
-    var blob = new Blob([ document.getElementById('editor_code').value ], { type: "text/x-markdown; charset=UTF-8" });
-    window.saveAs(blob, "Source.md");
+    var blob = new Blob([ document.getElementById('editor_code').value ], {
+      type: 'text/markdown;charset=utf-8'
+    });
+    window.saveAs(blob, 'Source.md');
   };
   var saveHtml = function() {
-    var blob = new Blob([ document.getElementById('preview_code').innerHTML ], { type: "text/html; charset=UTF-8" });
-    window.saveAs(blob, "Preview.html");
+    var blob = new Blob([ document.getElementById('preview_code').innerHTML ], {
+      type: 'text/html;charset=utf-8'
+    });
+    window.saveAs(blob, 'Preview.html');
   };
 
   return {
