@@ -13,6 +13,7 @@
   <script type="text/javascript" src="./javascripts/highlight.js"></script>
   <script type="text/javascript" src="./javascripts/blob.js"></script>
   <script type="text/javascript" src="./javascripts/filesaver.js"></script>
+  <script type="text/javascript" src="./javascripts/editor.js"></script>
   <script type="text/javascript" src="./javascripts/main.js"></script>
 </head>
 
@@ -20,8 +21,8 @@
   <div id="wrapper">
     <div id="editor_container">
       <div id="editor">
-        <span id="editor_title">Source.md<span class="button save" onclick="MarkdownEditor.saveMd();" title="Save markdown file"><span>Save</span></span><span class="button open" onclick="MarkdownEditor.open();" title="Open markdown file"><span>Open</span></span></span>
-		<textarea id="editor_code" wrap="off"></textarea>
+        <span id="editor_title">Source.md<span class="button save" onclick="MarkdownEditor.saveMarkdown();" title="Save markdown file"><span>Save</span></span><span class="button open" onclick="MarkdownEditor.open();" title="Open markdown file"><span>Open</span></span></span>
+        <textarea id="editor_code" wrap="off"></textarea>
       </div>
     </div>
     <div id="preview_container">
@@ -31,12 +32,6 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    //<![CDATA[
-      MarkdownEditor.init();
-    //]]>
-  </script>
 
   <div id="file_container" style="position: absolute; left: -31337px;; top: 0; opacity: 0;"><input type="file" id="file" name="file" /></div>
 </body>
